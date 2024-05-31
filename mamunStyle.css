@@ -47,6 +47,7 @@ header{
 
 .top-bar-bg{
 	background:rgba(0, 0, 0, 0.3);
+
 }
 .row {
 	max-width:1140px;
@@ -106,6 +107,7 @@ header{
 	height:100px;
 	margin:0px auto;
 	border-bottom:1px solid #576574;
+	
 }
 
 .menuList li{
@@ -237,6 +239,8 @@ button{
 	margin-top:20px;
 	text-transform:capitalize;
 }
+
+
 .grid-center i{
 	width:100%;
 	font-size:40px;
@@ -256,6 +260,88 @@ button{
 	background-repeat:no-repeat;
 	background-size:cover;
 	background-blend-mode:darken;
+	position: relative;
+	transition: all 0.6s ease-in-out;
+	
+
+}
+
+
+
+.hidden-content{
+    visibility: hidden;
+	position: absolute;
+	top: 0;
+	left:0;
+	height:250px;
+	width:350px;
+	transform: translateY(250px);
+	transition: all 0.7s ease-in-out;
+	
+	
+}
+
+
+.grid-one:hover .hidden-content, .grid-two:hover .hidden-content, .grid-three:hover .hidden-content{
+	visibility: visible;
+	transition: all 0.7s ease-in-out;
+	background-color: #28AD60;
+	transform: translateY(0px);
+
+	
+}
+
+.grid-one:hover .hidden-content h3{
+	width:100%;
+	height:auto;
+	font-size:20px;
+	color:#fff;
+	margin-top: 50px;
+	font-weight:600;
+	font-family:Montserrat;
+	text-align:center;
+	text-transform:capitalize;
+	transition: all 0.7s ease-in-out;
+}
+
+.hidden-content h3{
+	width:100%;
+	height:auto;
+	font-size:20px;
+	color:#fff;
+	margin-top: 50px;
+	font-weight:600;
+	font-family:Montserrat;
+	text-align:center;
+	text-transform:capitalize;
+
+}
+
+.grid-one:hover .hidden-content p{
+	width:230px;
+	height:auto;
+	font-size:15px;
+	color:#fff;
+	font-weight:400;
+	font-family:Montserrat;
+	text-align:center;
+	margin:20px auto;
+	text-transform:capitalize;
+	line-height: 25px;
+	transition: all 0.7s ease-in-out;
+}
+
+.hidden-content p{
+	width:230px;
+	height:auto;
+	font-size:15px;
+	color:#fff;
+	font-weight:400;
+	font-family:Montserrat;
+	text-align:center;
+	margin:20px auto;
+	text-transform:capitalize;
+	line-height: 25px;
 
 }
 
@@ -270,6 +356,7 @@ button{
     float:left;
 	margin-left:25px;
 	margin-right:25px;
+	position: relative;
 }
 .grid-three{
 	height:250px;
@@ -281,7 +368,83 @@ button{
 	background-repeat:no-repeat;
 	background-size:cover;
 	float:left;
+	position: relative;
 }
+
+
+
+.grid-container{
+	overflow: hidden;
+	display: grid;
+	
+	grid-template:repeat(2, 1fr)/ repeat(3, 1fr);
+	grid-gap:20px 30px;
+}
+
+.grid-container .grid-expan{
+	grid-column: 1 / 3;
+}
+
+
+.grid-container img{
+	 width:100%;
+	 transition: all .7s ease-in-out;
+}
+.grid-on:hover img{
+transform: scale(1.1);
+transition: all .7s ease-in-out;
+}
+.grid-on{
+	position: relative;
+	overflow: hidden;
+}
+.hidden-grid{
+	width:100%;
+	height:100%;
+	visibility: hidden;
+	position: absolute;
+	right: 0;
+	top:0;
+	transition: all 0.7s ease-in-out;
+	transform: translateX(-300px);
+}
+.grid-on:hover .hidden-grid{
+	visibility: visible;
+	background-color: rgba(40, 173, 95, 0.695);
+	transition: all 0.7s ease-in-out;
+	transform: translateX(0px);
+}
+.hidden-grid h3{
+	width:100%;
+	height:auto;
+	font-size:20px;
+	color:#fff;
+	margin-top: 180px;
+	font-weight:600;
+	font-family:Montserrat;
+	text-align:center;
+	text-transform:capitalize;
+	transition: all 0.7s ease-in-out;
+
+}
+
+
+.hidden-grid p{
+	width:100%;
+	height:auto;
+	font-size:15px;
+	color:#fff;
+	font-weight:400;
+	font-family:Montserrat;
+	text-align:center;
+	margin:20px auto;
+	text-transform:capitalize;
+	line-height: 25px;
+
+}
+
+
+
 
 .section-wide{
 	width:100%;
@@ -438,7 +601,7 @@ button{
 
 #servicesBg .grid-center  .grid-one:hover{
 	background-color:#28AE60;
-	transition:.6s;
+	transition:all .6s ease-in-out;
 	border:1px solid #28AE60;
 
 }
